@@ -1,0 +1,28 @@
+1-select t.id_stock as stock_supplier, s.id_supplier as supplier_supplier_id, t.stockname,s.suppliername
+from stock t, supplier s
+where t.id_supplier = s.id_supplier;
+
+2-SELECT C.NAME,S.SUPPLIER, C.ADRESS,S.ADRESS 
+FROM USERS S, SUPPLIER S 
+WHERE C.ADRESS = S.ADRESS;
+
+3-SELECT COUNT(STOCKNAME) AS AMOUNT_OF_IN_STOCK  
+FROM STOCK ;
+
+4-SELECT ADRESS
+FROM USERS 
+GROUP BY ADRESS;
+
+5-SELECT S.USERS_NAME,S.SURNAME
+FROM USERS U,SHIPMENT S
+WHERE S.ID_SHIPMENT=S.USERS_ID
+AND S.USERS_NAME LIKE 'Kemal' ;
+
+
+
+6-UPDATE USERS
+SET ADRESS = 'WARSAW'
+WHERE ID_USERS = 11;
+
+7-DELETE SHIPMENT 
+WHERE ID_SHIPMENT =03; 
